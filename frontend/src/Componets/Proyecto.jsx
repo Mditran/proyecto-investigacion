@@ -7,8 +7,8 @@ export const Proyecto = (props) => {
             <div className="card mb-4 m-1" style={{width: "18rem", display: "inline-block"}}>
                 <img className="card-img-top" src={props.image} alt="Card" />
                 <div className="card-body">
-                    <h5 className="card-title">{props.name}</h5>
-                    <p className="card-text">{props.tipo} - {props.fecha}</p>
+                    <h5 className="card-title">{props.projectname}</h5>
+                    <p className="card-text">{props.leadername} - {props.startdate}</p>
                     <a href="/" className="btn btn-primary">Ver mas</a>
                 </div>
             </div>

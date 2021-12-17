@@ -4,16 +4,37 @@ const projectSchema = buildSchema(`
     type Query{
         projects: [Proyecto]
         projectByName(name: String!): Proyecto
+        users: [Usuario]
+        usersByRol(rol: String!): Usuario
     }
 
     type Mutation{
-        addProyecto(name: String!, tipo: String!, fecha: String!, image: String!): Proyecto
+        addProyecto(projectname: String!, general: String!, specific: String!, budget: String!, startdate: String!, enddate: String!, leadername: String!, leaderid: String!, image: String!): Proyecto
+        
+        addUsuario(identification: String!, name: String!, surname: String!, email: String!, password: String!, rol: String!, state: String!): Usuario
     }
     type Proyecto{
-        name: String,
-        tipo: String,
-        fecha: String,
-        image: String,
+        _id: ID,
+        projectname: String!, 
+        general: String!, 
+        specific: String!, 
+        budget: String!, 
+        startdate: String!, 
+        enddate: String!, 
+        leadername: String!, 
+        leaderid: String!, 
+        image: String!
+    }
+
+    type Usuario{
+        _id: ID,
+        identification: String!,
+        name: String!,
+        surname: String!,
+        email: String!,
+        password: String!,
+        rol: String!,
+        state: String!,
     }
 `);
 

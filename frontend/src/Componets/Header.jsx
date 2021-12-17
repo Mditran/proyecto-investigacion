@@ -29,7 +29,7 @@ export const Header = () => {
                                 <Link className="nav-link"  exact to="/addProyecto">Agregar proyecto</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link"  exact to="/">Info</Link>
+                                <Link className="nav-link"  exact to="/listaUsuarios">Ver usuarios</Link>
                             </li>
                         </ul>
                     </div>

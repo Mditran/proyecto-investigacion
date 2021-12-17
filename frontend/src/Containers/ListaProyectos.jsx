@@ -1,20 +1,7 @@
 import React, { Component } from 'react'
 import { Proyecto } from '../Componets/Proyecto'
-import { gql } from "@apollo/client";
 import { graphql } from '@apollo/client/react/hoc';
-
-
-const allProjects = gql`
-    {
-        projects{
-            
-            name
-            tipo
-            fecha
-            image
-        }
-    }
-`
+import {allProjects} from '../Queries/Queries'
 
 
 class ListaProyectos extends Component {
@@ -31,11 +18,17 @@ class ListaProyectos extends Component {
         return (
             <div>
                 {data.projects.map((project) => {
-                    return <Proyecto key = {project.name}
-                        name = {project.name}
-                        tipo = {project.tipo}
-                        fecha = {project.fecha}
-                        image = {project.image}/>
+                    return <Proyecto key = {project.projectname}
+                        projectname  = {project.projectname}
+                        general  = {project.general}
+                        specific  = {project.specific}
+                        budget  = {project.budget}
+                        startdate  = {project.startdate}
+                        enddate  = {project.enddate}
+                        leadername  = {project.leadername}
+                        leaderid  = {project.leaderid}
+                        image = {project.image}
+                        />
                 })}
             </div>
         )

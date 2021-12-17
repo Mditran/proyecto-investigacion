@@ -1,5 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom'
 
 export const Login = () => {
     return (
@@ -40,7 +41,7 @@ export const Login = () => {
                                 </div>
 
 
-                                <button type="submit" className="btn btn-primary btn-lg btn-block my-2">Sign in</button>
+                                <button type="submit" className="btn btn-primary btn-lg btn-block my-2"><Link className="nav-link" style={{ color: "#FFFFFF" }} exact to="/addUsuario">Registrarme</Link></button>
 
                                 <div className="divider align-items-center my-2">
                                     <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
