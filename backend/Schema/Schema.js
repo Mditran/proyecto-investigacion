@@ -5,7 +5,7 @@ const projectSchema = buildSchema(`
         projects: [Proyecto]
         projectByName(name: String!): Proyecto
         users: [Usuario]
-        usersByRol(rol: String!): Usuario
+        userByLogin(rol: String!): Usuario
     }
 
     type Mutation{

@@ -8,9 +8,9 @@ const resolvers = {
         return Proyecto.find({});
     },
 
-    usersByRol: (args) => {
+    usersByLogin: (args) => {
         //Encuntra los usuarios con rol estudiante
-        return Usuario.find({rol: args.rol});
+        return Usuario.findOne({rol: args.rol});
     },
 
     users: () => {

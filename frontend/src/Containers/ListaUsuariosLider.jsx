@@ -4,10 +4,7 @@ import { graphql } from '@apollo/client/react/hoc';
 import { Usuario } from './../Componets/Usuario';
 
 
-
-
-
-class ListaUsuarios extends Component {
+class ListaUsuariosLider extends Component {
 
     render() {
         console.log(this.props);
@@ -32,15 +29,17 @@ class ListaUsuarios extends Component {
                         </tr>
                     </thead>
                     {data.users.map((user) => {
-                        return <Usuario key={user.identification}
-                            identification={user.identification}
-                            name={user.name}
-                            surname={user.surname}
-                            email={user.email}
-                            password={user.password}
-                            rol={user.rol}
-                            state={user.state}
-                        />
+                        if(user.rol === "Estudiante")
+                            return <Usuario key={user.identification}
+                                identification={user.identification}
+                                name={user.name}
+                                surname={user.surname}
+                                email={user.email}
+                                password={user.password}
+                                rol={user.rol}
+                                state={user.state}
+                            />
+                        return null
                     })}
                 </table>
             </div>
@@ -49,4 +48,4 @@ class ListaUsuarios extends Component {
 }
 
 
-export default graphql(allUsers)(ListaUsuarios)
+export default graphql(allUsers)(ListaUsuariosLider)

@@ -14,9 +14,9 @@
   .modal-container {
     position: relative;
     padding: 1rem;
-    min-width: 320px;
+    min-width: 480px;
     max-width: 480px;
-    min-height: 200px;
+    min-height: 00px;
     max-height: 600px;
     overflow-y: auto;
     background-color: #fff;

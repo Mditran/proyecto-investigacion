@@ -21,6 +21,7 @@ class AddProyecto extends Component {
     }
 
     submitProyecto = (event) => {
+        let random = Math.random();
         event.preventDefault()
         this.props.addProyecto({
             variables:{
@@ -32,7 +33,7 @@ class AddProyecto extends Component {
                 enddate: this.state.enddate,
                 leadername: "this.state.leadername",
                 leaderid: "this.state.leaderid",
-                image: "https://picsum.photos/700/400?random",
+                image: "https://picsum.photos/700/400?random"+{random},
             },
             refetchQueries: [{quey: allProjects}]
         })

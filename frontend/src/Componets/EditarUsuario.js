@@ -32,9 +32,9 @@ export const EditarUsuario = (props) => {
                 <div className="input-group mb-3">
                     <select className="form-select form-select-lg mb-3" id="inputGroupSelect02">
                         <option selected>{props.state}</option>
-                        {(props.state==='Pendiente') ? "":<option value="1">Pendiente</option>}
-                        {(props.state==='Autorizado') ? "": <option value="2">Autorizado</option>}
-                        {(props.state==='No autorizado') ? "" : <option value="3">No autorizado</option>}
+                        {(props.state==='Pendiente') ? "":<option value="Pendiente">Pendiente</option>}
+                        {(props.state==='Autorizado') ? "": <option value="Autorizado">Autorizado</option>}
+                        {(props.state==='No autorizado') ? "" : <option value="No autorizado">No autorizado</option>}
                     </select>
 
                 </div>

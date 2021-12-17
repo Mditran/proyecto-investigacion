@@ -3,7 +3,7 @@ import { gql } from "@apollo/client";
 const allProjects = gql`
     {
         projects{
-            
+            _id
             projectname 
             general 
             specific 
@@ -13,6 +13,34 @@ const allProjects = gql`
             leadername 
             leaderid 
             image
+        }
+    }
+`
+
+const allUsers = gql`
+    {
+        users{
+            identification
+            name
+            surname
+            email
+            password
+            rol
+            state
+        }
+    }
+`
+
+const allUsersByRol = gql`
+    {
+        usersByRol(rol: "Estudiante"){
+            identification
+            name
+            surname
+            email
+            password
+            rol
+            state
         }
     }
 `
@@ -35,4 +63,4 @@ const addProyecto = gql`
     }
 `
 
-export {allProjects, addProyecto}
+export {allProjects, allUsers, allUsersByRol, addProyecto}

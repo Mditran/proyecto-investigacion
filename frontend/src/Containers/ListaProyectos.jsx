@@ -19,6 +19,7 @@ class ListaProyectos extends Component {
             <div>
                 {data.projects.map((project) => {
                     return <Proyecto key = {project.projectname}
+                        _id = {project._id}
                         projectname  = {project.projectname}
                         general  = {project.general}
                         specific  = {project.specific}

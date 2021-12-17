@@ -5,7 +5,7 @@ import Modal from "./Modal";
 
 
 export const Usuario = (props) => {
-    const [isOpenModal1, openModal1, closeModal1] = useModal(false);
+    const [isOpenModal, openModal, closeModal] = useModal(false);
     return (
                 <tbody>
                     <tr>
@@ -16,10 +16,10 @@ export const Usuario = (props) => {
                         <td>{props.rol}</td>
                         <td>{props.state}</td>
                         <td>
-                            <button onClick={openModal1} type="button" className="btn btn-warning btn-sm px-3">
+                            <button onClick={openModal} type="button" className="btn btn-warning btn-sm px-3">
                                 <i className="fas fa-edit"></i>
                             </button>
-                            <Modal isOpen={isOpenModal1} closeModal={closeModal1}>
+                            <Modal isOpen={isOpenModal} closeModal={closeModal}>
                                 <EditarUsuario  identification={props.identification}
                                     name={props.name}
                                     surname={props.surname}

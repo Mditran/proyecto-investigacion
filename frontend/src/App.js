@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {Login} from "./Componets/Login"
 import ListaUsuarios from "./Containers/ListaUsuarios";
 import AddUsuario from "./Componets/AddUsuario";
+import ListaUsuariosLider from "./Containers/ListaUsuariosLider";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/listaProyectos" element={<ListaProyectos/>} />
           <Route path="/addProyecto" element={<AddProyecto/>} />
           <Route path="/listaUsuarios" element={<ListaUsuarios/>} />
+          <Route path="/listaUsuariosLider" element={<ListaUsuariosLider/>} />
           <Route path="/addUsuario" element={<AddUsuario/>} />
         </Routes>
         <Footer />

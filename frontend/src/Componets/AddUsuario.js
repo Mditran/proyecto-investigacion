@@ -91,9 +91,9 @@ class AddUsuario extends Component {
                             <div class="input-group  mb-3">
                                 <select className="form-select form-select-lg mb-3" ref="rol" onChange={(e) => this.setState({rol: e.target.value})} id="inputGroupSelect02">
                                     <option selected></option>
-                                    <option value="1">Estudiante</option>
-                                    <option value="2">Lider</option>
-                                    <option value="3">Administrador</option>
+                                    <option value="Estudiante">Estudiante</option>
+                                    <option value="Lider">Lider</option>
+                                    <option value="Administrador">Administrador</option>
                                 </select>
                             </div>
                             <div className=" d-flex flex-column text-center px-5 mt-3 mb-3">

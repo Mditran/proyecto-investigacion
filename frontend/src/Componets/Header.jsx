@@ -31,6 +31,10 @@ export const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link"  exact to="/listaUsuarios">Ver usuarios</Link>
                             </li>
+
+                            <li className="nav-item">
+                                <Link className="nav-link"  exact to="/listaUsuariosLider">Ver usuarios Lider</Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
