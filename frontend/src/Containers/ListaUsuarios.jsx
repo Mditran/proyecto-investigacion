@@ -32,7 +32,8 @@ class ListaUsuarios extends Component {
                         </tr>
                     </thead>
                     {data.users.map((user) => {
-                        return <Usuario key={user.identification}
+                        return <Usuario key={user._id}
+                            _id={user._id}
                             identification={user.identification}
                             name={user.name}
                             surname={user.surname}

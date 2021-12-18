@@ -41,12 +41,12 @@ class AddProyecto extends Component {
     }
 
     cancelCourse(){
-        this.refs.name.value="";
-        this.refs.obgeneral.value="";
-        this.refs.obspecific.value="";
-        this.refs.budget.value="";
-        this.refs.startdate.value="";
-        this.refs.enddate.value="";
+        this.name.value="";
+        this.obgeneral.value="";
+        this.obspecific.value="";
+        this.budget.value="";
+        this.startdate.value="";
+        this.enddate.value="";
     }
 
     render() {
@@ -63,27 +63,27 @@ class AddProyecto extends Component {
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-card" aria-hidden="true"></i></span>
                             </div>
                             <div class="input-group  mb-3">
-                                <input type="text" class="form-control" ref="name" placeholder="Nombre del Proyecto" onChange={(e) => this.setState({projectname: e.target.value})} />
+                                <input type="text" class="form-control" placeholder="Nombre del Proyecto" onChange={(e) => this.setState({projectname: e.target.value})} />
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-folders"></i></span>
                             </div>
                             <div class="input-group  mb-3">
-                                <textarea class="form-control" ref="obgeneral" aria-label="With textarea" placeholder='Objetivos generales' onChange={(e) => this.setState({general: e.target.value})}></textarea>
+                                <textarea class="form-control" aria-label="With textarea" placeholder='Objetivos generales' onChange={(e) => this.setState({general: e.target.value})}></textarea>
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-check" aria-hidden="true"></i></span>
                             </div>
                             <div class="input-group  mb-3">
-                                <textarea class="form-control" ref="obspecific" aria-label="With textarea" placeholder='Objetivos especificos' onChange={(e) => this.setState({specific: e.target.value})}></textarea>
+                                <textarea class="form-control" aria-label="With textarea" placeholder='Objetivos especificos' onChange={(e) => this.setState({specific: e.target.value})}></textarea>
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-check-square" aria-hidden="true"></i></span>
                             </div>
                             <div class="input-group  mb-3">
-                                <input type="text" class="form-control" ref="budget" placeholder="Presupuesto" onChange={(e) => this.setState({budget: e.target.value})}/>
+                                <input type="text" class="form-control" placeholder="Presupuesto" onChange={(e) => this.setState({budget: e.target.value})}/>
                                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-dollar-sign"></i></span>
                             </div>
                             <div class="input-group  mb-3">
-                                <input type="date" class="form-control" ref="startdate" onChange={(e) => this.setState({startdate: e.target.value})} />
+                                <input type="date" class="form-control" onChange={(e) => this.setState({startdate: e.target.value})} />
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-play" aria-hidden="true"></i></span>
                             </div>
                             <div class="input-group  mb-3">
-                                <input type="date" class="form-control" ref="enddate" onChange={(e) => this.setState({enddate: e.target.value})}/>
+                                <input type="date" class="form-control" onChange={(e) => this.setState({enddate: e.target.value})}/>
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-stop" aria-hidden="true"></i></span>
                             </div>
                             <div className=" d-flex flex-column text-center px-5 mt-3 mb-3">

@@ -20,6 +20,7 @@ const allProjects = gql`
 const allUsers = gql`
     {
         users{
+            _id
             identification
             name
             surname
@@ -44,6 +45,8 @@ const allUsersByRol = gql`
         }
     }
 `
+
+
 
 const addProyecto = gql`
     mutation AddProyecto($projectname: String!, $general: String!, $specific: String!, $budget: String!, $startdate: String!, $enddate: String!, $leadername: String!, $leaderid: String!, $image: String!){

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useModal } from "../hooks/useModal";
-import { EditarUsuario } from './EditarUsuario';
+import  EditarUsuario  from './EditarUsuario';
 import Modal from "./Modal";
 
 
@@ -20,7 +20,9 @@ export const Usuario = (props) => {
                                 <i className="fas fa-edit"></i>
                             </button>
                             <Modal isOpen={isOpenModal} closeModal={closeModal}>
-                                <EditarUsuario  identification={props.identification}
+                                <EditarUsuario  
+                                    _id={props._id}
+                                    identification={props.identification}
                                     name={props.name}
                                     surname={props.surname}
                                     email={props.email}

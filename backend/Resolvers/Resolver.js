@@ -8,7 +8,7 @@ const resolvers = {
         return Proyecto.find({});
     },
 
-    usersByLogin: (args) => {
+    usersByID: (args) => {
         //Encuntra los usuarios con rol estudiante
         return Usuario.findOne({rol: args.rol});
     },
@@ -16,6 +16,22 @@ const resolvers = {
     users: () => {
         //Encuntra todos los proyectos
         return Usuario.find({});
+    },
+
+    updateUser: async(args) => {
+            console.log(args);
+            console.log('Hola mundo');
+            let result= await Usuario.findByIdAndUpdate(args._id , {"$set": {
+                identification: args.identification,
+                name: args.name,
+                surname: args.surname,
+                email: args.email,
+                password: args.password,
+                rol: args.rol,
+                state: args.state,
+            }})
+                console.log(result);
+                return result._doc 
     },
 
     projectByName: (args) => {
@@ -38,6 +54,7 @@ const resolvers = {
     },
 
     updateUsuario: (args) => {
+        console.log('Hola mundo 2');
         let usuario = new Usuario({
             
             identification: args.identification,
