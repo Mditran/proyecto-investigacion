@@ -10,7 +10,12 @@ const resolvers = {
 
     usersByID: (args) => {
         //Encuntra los usuarios con rol estudiante
-        return Usuario.findOne({rol: args.rol});
+        return Usuario.findById({_id: args._id});
+    },
+
+    userLogin: (args) => {
+        //Encuntra los usuarios con rol estudiante
+        return Usuario.findOne({email: args.email, password: args.password});
     },
 
     users: () => {
@@ -79,6 +84,8 @@ const resolvers = {
             enddate: args.enddate,
             leadername: args.leadername,
             leaderid: args.leaderid,
+            state: args.state,
+            fase: args.fase,
             image: args.image,
         })
         proyecto.save()

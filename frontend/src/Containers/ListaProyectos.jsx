@@ -28,6 +28,8 @@ class ListaProyectos extends Component {
                         enddate  = {project.enddate}
                         leadername  = {project.leadername}
                         leaderid  = {project.leaderid}
+                        state  = {project.state}
+                        fase  = {project.fase}
                         image = {project.image}
                         />
                 })}

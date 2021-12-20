@@ -57,6 +57,8 @@ class AddUsuario extends Component {
         this.refs.password.value="";
         this.refs.rol.value="";
     }
+    
+
 
     render() {
         return (

@@ -46,12 +46,26 @@ const allUsersByRol = gql`
     }
 `
 
+const userLogin = gql`
+    query UserLogin($email: Stirng!, $password: String!){
+        userLogin(email: $email, password: $password){
+            identification
+            name
+            surname
+            email
+            password
+            rol
+            state
+        }
+    }
+`
+
 
 
 const addProyecto = gql`
-    mutation AddProyecto($projectname: String!, $general: String!, $specific: String!, $budget: String!, $startdate: String!, $enddate: String!, $leadername: String!, $leaderid: String!, $image: String!){
+    mutation AddProyecto($projectname: String!, $general: String!, $specific: String!, $budget: String!, $startdate: String!, $enddate: String!, $leadername: String!, $leaderid: String!, $state: String!, $fase: String!, $image: String!){
         
-        addProyecto(projectname: $projectname, general: $general, specific: $specific, budget: $budget, startdate: $startdate, enddate: $enddate, leadername: $leadername, leaderid: $leaderid, image: $image){
+        addProyecto(projectname: $projectname, general: $general, specific: $specific, budget: $budget, startdate: $startdate, enddate: $enddate, leadername: $leadername, leaderid: $leaderid, state: $state, fase: $fase, image: $image){
 
             projectname
             general
@@ -61,9 +75,11 @@ const addProyecto = gql`
             enddate
             leadername
             leaderid
+            state
+            fase
             image
         }
     }
 `
 
-export {allProjects, allUsers, allUsersByRol, addProyecto}
+export {allProjects, allUsers, allUsersByRol, addProyecto, userLogin}

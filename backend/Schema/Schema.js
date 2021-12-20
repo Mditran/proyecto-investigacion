@@ -5,11 +5,13 @@ const projectSchema = buildSchema(`
         projects: [Proyecto]
         projectByName(name: String!): Proyecto
         users: [Usuario]
-        userByID(rol: String!): Usuario
+        usersByID(_id: ID!): Usuario
+
+        userLogin(email: String!, password: String!): Usuario
     }
 
     type Mutation{
-        addProyecto(projectname: String!, general: String!, specific: String!, budget: String!, startdate: String!, enddate: String!, leadername: String!, leaderid: String!, image: String!): Proyecto
+        addProyecto(projectname: String!, general: String!, specific: String!, budget: String!, startdate: String!, enddate: String!, leadername: String!, leaderid: String!, state: String!, fase: String! image: String!): Proyecto
         
         addUsuario(identification: String!, name: String!, surname: String!, email: String!, password: String!, rol: String!, state: String!): Usuario
         updateUser(_id: ID!, identification: String!, name: String!, surname: String!, email: String!, password: String!, rol: String!, state: String!): Usuario!
@@ -24,6 +26,8 @@ const projectSchema = buildSchema(`
         enddate: String!, 
         leadername: String!, 
         leaderid: String!, 
+        state: String!, 
+        fase: String!,
         image: String!
     }
 
