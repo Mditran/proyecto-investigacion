@@ -12,6 +12,8 @@ class ListaProyectos extends Component {
         if(data.loading){
             return <h2>We are loading the projects</h2>
         }
+        console.log("Noooooo", data.projects);
+
         if(data.projects.length === 0){
             return <h2>Wo hay ningun proyecto</h2>
         }
@@ -28,6 +30,7 @@ class ListaProyectos extends Component {
                         enddate  = {project.enddate}
                         leadername  = {project.leadername}
                         leaderid  = {project.leaderid}
+                        definite  = {project.definite}
                         state  = {project.state}
                         fase  = {project.fase}
                         image = {project.image}

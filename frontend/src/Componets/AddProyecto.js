@@ -17,6 +17,7 @@ class AddProyecto extends Component {
         enddate: '',
         leadername: '',
         leaderid: '',
+        definite: '',
         state: '',
         fase: '',
         image: '',
@@ -35,8 +36,9 @@ class AddProyecto extends Component {
                 enddate: this.state.enddate,
                 leadername: this.state.leadername,
                 leaderid: this.state.leaderid,
+                definite: "Pendiente",
                 state: "Inactivo",
-                fase: "En espera",
+                fase: "",
                 image: "https://picsum.photos/700/400?random"+{random},
             },
         })

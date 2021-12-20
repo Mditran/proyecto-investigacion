@@ -11,7 +11,10 @@ const allProjects = gql`
             startdate 
             enddate 
             leadername 
-            leaderid 
+            leaderid
+            definite
+            state
+            fase
             image
         }
     }
@@ -63,9 +66,9 @@ const userLogin = gql`
 
 
 const addProyecto = gql`
-    mutation AddProyecto($projectname: String!, $general: String!, $specific: String!, $budget: String!, $startdate: String!, $enddate: String!, $leadername: String!, $leaderid: String!, $state: String!, $fase: String!, $image: String!){
+    mutation AddProyecto($projectname: String!, $general: String!, $specific: String!, $budget: String!, $startdate: String!, $enddate: String!, $leadername: String!, $leaderid: String!, $definite: String!, $state: String!, $fase: String!, $image: String!){
         
-        addProyecto(projectname: $projectname, general: $general, specific: $specific, budget: $budget, startdate: $startdate, enddate: $enddate, leadername: $leadername, leaderid: $leaderid, state: $state, fase: $fase, image: $image){
+        addProyecto(projectname: $projectname, general: $general, specific: $specific, budget: $budget, startdate: $startdate, enddate: $enddate, leadername: $leadername, leaderid: $leaderid, definite: $definite, state: $state, fase: $fase, image: $image){
 
             projectname
             general
@@ -75,6 +78,7 @@ const addProyecto = gql`
             enddate
             leadername
             leaderid
+            definite
             state
             fase
             image

@@ -9,6 +9,7 @@ const projectSchema = new mongoose.Schema({
         enddate: String, 
         leadername: String, 
         leaderid: String, 
+        definite: String,
         state: String, 
         fase: String, 
         image: String

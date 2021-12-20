@@ -63,9 +63,12 @@ class EditarUsuario extends Component {
                 state: this.state.state,
             },
         })
-        
+        this.cancelCourse()
     }
 }
+    cancelCourse(){
+        document.getElementById("create-course-form").reset();
+    }
     render() {
         return (
             <div className="container mt-5 mb-5 d-flex justify-content-center">
@@ -73,7 +76,7 @@ class EditarUsuario extends Component {
                     <div className="card-body">
                         <h6 className="card-title mb-3">Datos de {this.state.name}</h6>
                         <h6 className="information mt-4">Actulizacion de datos</h6>
-                        <form onSubmit={this.submitUsuario}>
+                        <form onSubmit={this.submitUsuario} id="create-course-form">
                             <div class="input-group  mb-3">
                                 <input type="text" class="form-control" value={this.state.identification} onChange={(e) => this.setState({identification: e.target.value})}/>
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-card" aria-hidden="true"></i></span>
@@ -91,19 +94,18 @@ class EditarUsuario extends Component {
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                             </div>
                             <div class="input-group  mb-3">
-                                <input type="text" class="form-control" placeholder="Contraseña" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}/>
+                                <input type="password" class="form-control" placeholder="Contraseña" value={this.state.password} onChange={(e) => this.setState({password: e.target.value})}/>
                                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-unlock" aria-hidden="true"></i></span>
                             </div>
                             <div class="input-group  mb-3">
                                 <input class="form-control" disabled value={this.state.rol}/>
                             </div>
                             <div class="input-group  mb-3">
-                                <select className="form-select form-select-lg mb-3" onChange={(e) => this.setState({state: e.target.value})} id="inputGroupSelect02">
+                                <select className="form-select form-select-lg mb-3" disabled onChange={(e) => this.setState({state: e.target.value})} id="inputGroupSelect02">
                                     <option selected>{this.state.state}</option>
                                     {(this.state.state === "Pendiente")? "": <option value="Pendiente">Pendiente</option>}
                                     {(this.state.state === "Autorizado")? "": <option value="Autorizado">Autorizado</option>}
                                     {(this.state.state === "No autorizado")? "": <option value="No autorizado">No autorizado</option>}
-                                
                                 </select>
                             </div>
                             <div className=" d-flex flex-column text-center px-5 mt-3 mb-3">

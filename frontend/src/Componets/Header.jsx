@@ -31,9 +31,20 @@ export const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link"  exact to="/listaUsuarios">Ver usuarios</Link>
                             </li>
-
+                            <li className="nav-item">
+                                <Link className="nav-link"  exact to="/listaProyectosReg">Ver proyectos</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link"  exact to="/listaProyectosLider">Proyectos Lider</Link>
+                            </li>
                             <li className="nav-item">
                                 <Link className="nav-link"  exact to="/listaUsuariosLider">Ver usuarios Lider</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link"  exact to="/avancesLider">Avances Lider</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link"  exact to="/avancesEstudiante">Avances Estudiante</Link>
                             </li>
                         </ul>
                     </div>
