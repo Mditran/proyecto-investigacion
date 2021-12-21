@@ -10,7 +10,6 @@ import { Usuario } from './../Componets/Usuario';
 class ListaUsuarios extends Component {
 
     render() {
-        console.log(this.props);
         let data = this.props.data
         if (data.loading) {
             return <h2>We are loading the users</h2>

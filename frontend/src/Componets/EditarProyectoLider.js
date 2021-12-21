@@ -66,59 +66,59 @@ class EditarProyectoLider extends Component {
                         <h6 className="card-title mb-3">Proyecto "{this.state.projectname}"</h6>
                         <h6 className="information mt-4">Actulizacion de datos</h6>
                         <form onSubmit={this.submitUsuario} id="create-course-form">
-                            <div class="input-group  mb-3">
-                                <input type="text" class="form-control" placeholder="Nombre del Proyecto" ref="projectname" value={this.state.projectname} onChange={(e) => this.setState({projectname: e.target.value})} />
-                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-folders"></i></span>
+                            <div className="input-group  mb-3">
+                                <input type="text" className="form-control" placeholder="Nombre del Proyecto" value={this.state.projectname} onChange={(e) => this.setState({projectname: e.target.value})} />
+                                <span className="input-group-text" id="basic-addon1"><i className="fas fa-folders"></i></span>
                             </div>
-                            <div class="input-group  mb-3">
-                                <input type="text" disabled class="form-control" placeholder="Nombre" ref="leadername" value={this.state.leadername} onChange={(e) => this.setState({leadername: e.target.value})}/>
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <div className="input-group  mb-3">
+                                <input type="text" disabled className="form-control" placeholder="Nombre" value={this.state.leadername} onChange={(e) => this.setState({leadername: e.target.value})}/>
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-user" aria-hidden="true"></i></span>
                         </div>
-                        <div class="input-group  mb-3">
-                                <input type="text" disabled class="form-control" placeholder='Identificacion' ref="leaderid" value={this.state.leaderid} onChange={(e) => this.setState({leaderid: e.target.value})}/>
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-card" aria-hidden="true"></i></span>
+                        <div className="input-group  mb-3">
+                                <input type="text" disabled className="form-control" placeholder='Identificacion' value={this.state.leaderid} onChange={(e) => this.setState({leaderid: e.target.value})}/>
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-id-card" aria-hidden="true"></i></span>
                             </div>
-                            <div class="input-group  mb-3">
-                                <textarea class="form-control" aria-label="With textarea" placeholder='Objetivos generales' ref="general"  value={this.state.general} onChange={(e) => this.setState({general: e.target.value})}></textarea>
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-check" aria-hidden="true"></i></span>
+                            <div className="input-group  mb-3">
+                                <textarea className="form-control" aria-label="With textarea" placeholder='Objetivos generales'  value={this.state.general} onChange={(e) => this.setState({general: e.target.value})}></textarea>
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-check" aria-hidden="true"></i></span>
                             </div>
-                            <div class="input-group  mb-3">
-                                <textarea class="form-control" aria-label="With textarea" placeholder='Objetivos especificos' ref="specific" value={this.state.specific} onChange={(e) => this.setState({specific: e.target.value})}></textarea>
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-check-square" aria-hidden="true"></i></span>
+                            <div className="input-group  mb-3">
+                                <textarea className="form-control" aria-label="With textarea" placeholder='Objetivos especificos' value={this.state.specific} onChange={(e) => this.setState({specific: e.target.value})}></textarea>
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-check-square" aria-hidden="true"></i></span>
                             </div>
-                            <div class="input-group  mb-3">
-                                <input type="text" class="form-control" placeholder="Presupuesto" ref="budget" value={this.state.budget} onChange={(e) => this.setState({budget: e.target.value})}/>
-                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-dollar-sign"></i></span>
+                            <div className="input-group  mb-3">
+                                <input type="text" className="form-control" placeholder="Presupuesto" value={this.state.budget} onChange={(e) => this.setState({budget: e.target.value})}/>
+                                <span className="input-group-text" id="basic-addon1"><i className="fas fa-dollar-sign"></i></span>
                             </div>
-                            <div class="input-group  mb-3">
-                                <input type="date"  class="form-control" ref="startdate" value={this.state.startdate} disabled onChange={(e) => this.setState({startdate: e.target.value})} />
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-play" aria-hidden="true"></i></span>
+                            <div className="input-group  mb-3">
+                                <input type="date"  className="form-control" value={this.state.startdate} disabled onChange={(e) => this.setState({startdate: e.target.value})} />
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-play" aria-hidden="true"></i></span>
                             </div>
-                            <div class="input-group  mb-3">
-                                <input type="date" disabled class="form-control" ref="enddate" value={this.state.enddate} onChange={(e) => this.setState({enddate: e.target.value})}/>
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-stop" aria-hidden="true"></i></span>
+                            <div className="input-group  mb-3">
+                                <input type="date" disabled className="form-control" value={this.state.enddate} onChange={(e) => this.setState({enddate: e.target.value})}/>
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-stop" aria-hidden="true"></i></span>
                             </div>
-                            <label for="disabledSelect" class="form-label">Definicion del proyecto</label>
-                            <div class="input-group  mb-3">
+                            <label htmlFor="disabledSelect" className="form-label">Definicion del proyecto</label>
+                            <div className="input-group  mb-3">
                                 <select className="form-select form-select-lg mb-3" disabled onChange={(e) => this.setState({definite: e.target.value})} id="inputGroupSelect02">
-                                    <option selected>{this.state.definite}</option>
+                                    <option value={this.state.definite}>{this.state.definite}</option>
                                     {(this.state.definite === "Pendiente")? "": <option value="Pendiente">Pendiente</option>}
                                     {(this.state.definite === "Aprobado")? "": <option value="Aprobado">Aprobado</option>}
                                     {(this.state.definite === "No aprobado")? "": <option value="No aprobado">No aprobado</option>}
                                 </select>
                             </div>
-                            <label for="disabledSelect" class="form-label">Estado del proyecto</label>
-                            <div class="input-group  mb-3">
+                            <label htmlFor="disabledSelect" className="form-label">Estado del proyecto</label>
+                            <div className="input-group  mb-3">
                                 <select className="form-select form-select-lg mb-3" disabled onChange={(e) => this.setState({state: e.target.value})} id="inputGroupSelect02">
-                                    <option selected>{this.state.state}</option>
+                                    <option value={this.state.state}>{this.state.state}</option>
                                     {(this.state.state === "Activo")? "": <option value="Activo">Activo</option>}
                                     {(this.state.state === "Inactivo")? "": <option value="Inactivo">Inactivo</option>}
                                 </select>
                             </div>
-                            <label for="disabledSelect" class="form-label">Fase del proyecto</label>
-                            <div class="input-group  mb-3">
+                            <label htmlFor="disabledSelect" className="form-label">Fase del proyecto</label>
+                            <div className="input-group  mb-3">
                                 <select className="form-select form-select-lg mb-3" disabled onChange={(e) => this.setState({fase: e.target.value})} id="inputGroupSelect02">
-                                    <option selected>{this.state.fase}</option>
+                                    <option value={this.state.fase}>{this.state.fase}</option>
                                     {(this.state.fase === "Iniciado")? "": <option value="Iniciado">Iniciado</option>}
                                     {(this.state.fase === "En desarrollo")? "": <option value="En desarrollo">En desarrollo</option>}
                                     {(this.state.fase === "Terminado")? "": <option value="Terminado">Terminado</option>}

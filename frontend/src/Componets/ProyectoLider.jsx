@@ -1,7 +1,7 @@
 import React from 'react'
 import { useModal } from "../hooks/useModal";
-import Modal from "./Modal";
-import { InscripcionProyecto } from './IncripcionProyecto';
+import Modal from "./Modal";/* 
+import { InscripcionProyecto } from './IncripcionProyecto'; */
 import EditarProyectoLider from './EditarProyectoLider';
 
 export const ProyectoLider = (props) => {
