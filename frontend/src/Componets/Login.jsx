@@ -47,7 +47,7 @@ export const Login = () => {
                                     <button type="submit" className="btn btn-primary btn-lg btn-block my-2">Iniciar sesion</button>
                                 </div>
                                 <div className="form-outline mb-4">
-                                    <button type="submit" className="btn btn-primary btn-lg btn-block my-2"><Link className="nav-link" style={{ color: "#FFFFFF" }} exact to="/addUsuario">Registrarme</Link></button>
+                                    <button type="submit" className="btn btn-primary btn-lg btn-block my-2"><Link className="nav-link" style={{ color: "#FFFFFF" }} exact="true" to="/addUsuario">Registrarme</Link></button>
                                 </div>
                                 <div className="divider align-items-center my-2">
                                     <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>

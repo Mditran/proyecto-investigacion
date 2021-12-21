@@ -51,13 +51,10 @@ class EditarProyectoLider extends Component {
             },
         })
         alert('Datos actualizados')
-        this.cancelCourse()
     }
     
 }
-    cancelCourse(){
-        document.getElementById("create-course-form").reset();
-    }
+
     render() {
         return (
             <div className="container mt-5 mb-5 d-flex justify-content-center">
@@ -65,7 +62,7 @@ class EditarProyectoLider extends Component {
                     <div className="card-body">
                         <h6 className="card-title mb-3">Proyecto "{this.state.projectname}"</h6>
                         <h6 className="information mt-4">Actulizacion de datos</h6>
-                        <form onSubmit={this.submitUsuario} id="create-course-form">
+                        <form onSubmit={this.submitUsuario}>
                             <div className="input-group  mb-3">
                                 <input type="text" className="form-control" placeholder="Nombre del Proyecto" value={this.state.projectname} onChange={(e) => this.setState({projectname: e.target.value})} />
                                 <span className="input-group-text" id="basic-addon1"><i className="fas fa-folders"></i></span>

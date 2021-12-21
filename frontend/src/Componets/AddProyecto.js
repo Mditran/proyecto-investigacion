@@ -42,6 +42,7 @@ class AddProyecto extends Component {
                 image: "https://picsum.photos/700/400?random"+{random},
             },
         })
+        alert('Proyecto Creado')
         this.cancelCourse()
     }
 

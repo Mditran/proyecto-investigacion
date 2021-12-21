@@ -20,31 +20,31 @@ export const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarExample01">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item active">
-                                <Link className="nav-link" aria-current="page" exact to="/">Inicio</Link>
+                                <Link className="nav-link" aria-current="page" exact="true" to="/">Inicio</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" exact to="/listaProyectos">Proyectos</Link>
+                                <Link className="nav-link" exact="true" to="/listaProyectos">Proyectos</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link"  exact to="/addProyecto">Agregar proyecto</Link>
+                                <Link className="nav-link"  exact="true" to="/addProyecto">Agregar proyecto</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link"  exact to="/listaUsuarios">Ver usuarios</Link>
+                                <Link className="nav-link"  exact="true" to="/listaUsuarios">Ver usuarios</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link"  exact to="/listaProyectosReg">Ver proyectos</Link>
+                                <Link className="nav-link"  exact="true" to="/listaProyectosReg">Ver proyectos</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link"  exact to="/listaProyectosLider">Proyectos Lider</Link>
+                                <Link className="nav-link"  exact="true" to="/listaProyectosLider">Proyectos Lider</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link"  exact to="/listaUsuariosLider">Ver usuarios Lider</Link>
+                                <Link className="nav-link"  exact="true" to="/listaUsuariosLider">Ver usuarios Lider</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link"  exact to="/avancesLider">Avances Lider</Link>
+                                <Link className="nav-link"  exact="true" to="/avancesLider">Avances Lider</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link"  exact to="/avancesEstudiante">Avances Estudiante</Link>
+                                <Link className="nav-link"  exact="true" to="/avancesEstudiante">Avances Estudiante</Link>
                             </li>
                         </ul>
                     </div>

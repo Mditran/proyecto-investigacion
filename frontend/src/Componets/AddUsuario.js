@@ -46,17 +46,14 @@ class AddUsuario extends Component {
                 state: "Pendiente",
             }
         })
+        alert('Usuario Creado')
         this.cancelCourse()
     }
 
     cancelCourse(){
-        this.refs.identification.value="";
-        this.refs.name.value="";
-        this.refs.surname.value="";
-        this.refs.email.value="";
-        this.refs.password.value="";
-        this.refs.rol.value="";
+        document.getElementById("create-course-form").reset();
     }
+
     
 
 
@@ -67,32 +64,32 @@ class AddUsuario extends Component {
                 <div className="card px-1 py-4">
                     <div className="card-body">
                         <h6 className="card-title mb-3">Creacion de Usuarios</h6>
-                        <form onSubmit={this.submitUsuario}>
-                            <div class="input-group  mb-3">
-                                <input type="text" class="form-control" placeholder='Identificacion' ref="identification" onChange={(e) => this.setState({identification: e.target.value})}/>
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-id-card" aria-hidden="true"></i></span>
+                        <form onSubmit={this.submitUsuario}  id="create-course-form">
+                            <div className="input-group  mb-3">
+                                <input type="text" className="form-control" placeholder='Identificacion' onChange={(e) => this.setState({identification: e.target.value})}/>
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-id-card" aria-hidden="true"></i></span>
                             </div>
-                            <div class="input-group  mb-3">
-                                <input type="text" class="form-control" placeholder="Nombre" ref="name" onChange={(e) => this.setState({name: e.target.value})}/>
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <div className="input-group  mb-3">
+                                <input type="text" className="form-control" placeholder="Nombre" onChange={(e) => this.setState({name: e.target.value})}/>
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-user" aria-hidden="true"></i></span>
 
                             </div>
-                            <div class="input-group  mb-3">
-                                <input type="text" class="form-control" placeholder="Apellido" ref="surname" onChange={(e) => this.setState({surname: e.target.value})}/>
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                            <div className="input-group  mb-3">
+                                <input type="text" className="form-control" placeholder="Apellido" onChange={(e) => this.setState({surname: e.target.value})}/>
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-user" aria-hidden="true"></i></span>
 
                             </div>
-                            <div class="input-group  mb-3">
-                                <input type="email" class="form-control" placeholder="Email" ref="email" onChange={(e) => this.setState({email: e.target.value})}/>
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <div className="input-group  mb-3">
+                                <input type="email" className="form-control" placeholder="Email" onChange={(e) => this.setState({email: e.target.value})}/>
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-envelope" aria-hidden="true"></i></span>
                             </div>
-                            <div class="input-group  mb-3">
-                                <input type="password" class="form-control" placeholder="Contraseña" ref="password" onChange={(e) => this.setState({password: e.target.value})}/>
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-unlock" aria-hidden="true"></i></span>
+                            <div className="input-group  mb-3">
+                                <input type="password" className="form-control" placeholder="Contraseña" onChange={(e) => this.setState({password: e.target.value})}/>
+                                <span className="input-group-text" id="basic-addon1"><i className="fa fa-unlock" aria-hidden="true"></i></span>
                             </div>
-                            <div class="input-group  mb-3">
-                                <select className="form-select form-select-lg mb-3" ref="rol" onChange={(e) => this.setState({rol: e.target.value})} id="inputGroupSelect02">
-                                    <option selected></option>
+                            <div className="input-group  mb-3">
+                                <select className="form-select form-select-lg mb-3" onChange={(e) => this.setState({rol: e.target.value})} id="inputGroupSelect02">
+                                    <option value=""></option>
                                     <option value="Estudiante">Estudiante</option>
                                     <option value="Lider">Lider</option>
                                     <option value="Administrador">Administrador</option>

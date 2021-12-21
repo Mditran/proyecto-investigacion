@@ -21,14 +21,14 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Login/>} />
-          <Route path="/listaProyectos" element={<ListaProyectos/>} />
-          <Route path="/listaProyectosLider" element={<ListaProyectosLider/>} />
-          <Route path="/listaProyectosReg" element={<ListaProyectosRegistrados/>} />
-          <Route path="/addProyecto" element={<AddProyecto/>} />
-          <Route path="/listaUsuarios" element={<ListaUsuarios/>} />
-          <Route path="/listaUsuariosLider" element={<ListaUsuariosLider/>} />
-          <Route path="/addUsuario" element={<AddUsuario/>} />
+          <Route exact="true" path="/" element={<Login/>} />
+          <Route exact="true" path="/listaProyectos" element={<ListaProyectos/>} />
+          <Route exact="true" path="/listaProyectosLider" element={<ListaProyectosLider/>} />
+          <Route exact="true" path="/listaProyectosReg" element={<ListaProyectosRegistrados/>} />
+          <Route exact="true" path="/addProyecto" element={<AddProyecto/>} />
+          <Route exact="true" path="/listaUsuarios" element={<ListaUsuarios/>} />
+          <Route exact="true" path="/listaUsuariosLider" element={<ListaUsuariosLider/>} />
+          <Route exact="true" path="/addUsuario" element={<AddUsuario/>} />       
         </Routes>
         <Footer />
         {/* <Footer /> */}
